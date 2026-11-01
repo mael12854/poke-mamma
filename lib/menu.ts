@@ -73,3 +73,15 @@ export function sanitizeBowl(input: unknown): Bowl | null {
   if (!bowl.base || !bowl.proteine) return null;
   return bowl;
 }
+
+export const MAX_BOWLS = 6;
+
+/** Les bols d’une commande (les anciennes commandes n’en ont qu’un). */
+export function orderBowls(o: Bowl & { bowls?: Bowl[] }): Bowl[] {
+  if (o.bowls && o.bowls.length) return o.bowls;
+  return [{ base: o.base, legumes: o.legumes, proteine: o.proteine, qty: o.qty, tips: o.tips, extras: o.extras }];
+}
+
+export function bowlsLabel(n: number) {
+  return `${n} bol${n > 1 ? "s" : ""}`;
+}

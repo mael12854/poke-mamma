@@ -68,3 +68,16 @@ html:has(.k-outer), body:has(.k-outer) { overflow: hidden; overscroll-behavior: 
 .k-cookline { font-size: 30px; line-height: 1.4; max-width: 20ch; }
 .k-ecoute { font-size: 44px; }
 .k-again { padding: 26px 48px; border-radius: 999px; border: 4px solid var(--nori); background: var(--nori); color: var(--riz) !important; font-size: 32px; }
+
+/* Plusieurs bols */
+.k-bowlno { color: var(--saumon-fonce); }
+.k-cart { display: flex; flex-direction: column; background: #fff; border: 4px solid var(--nori); border-radius: 28px; overflow: hidden; flex: none; }
+.k-cart-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; padding: 18px 24px; border-bottom: 2px dashed var(--nori); }
+.k-cart-row:last-child { border-bottom: 0; }
+.k-cart-n { font-size: 26px; white-space: nowrap; }
+.k-cart-txt { font-size: 22px; line-height: 1.3; }
+.k-cart-row .k-change, .k-current .k-change { border: 0; background: transparent; padding: 8px 0; }
+.k-current { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: -12px; }
+.k-current .bagel { font-size: 36px; }
+.k-add { flex: none; padding: 26px; border-radius: 28px; border: 4px dashed var(--nori); background: transparent; font-size: 32px; }
+.k-add:active { background: var(--mangue); }

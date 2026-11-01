@@ -11,6 +11,8 @@ export interface Order {
   qty: number;
   tips: string[];
   extras: string[];
+  /** Tous les bols de la commande (vide pour les anciennes commandes). */
+  bowls?: import("./menu").Bowl[];
   status: OrderStatus;
   cook: string | null;
   created_at: string;

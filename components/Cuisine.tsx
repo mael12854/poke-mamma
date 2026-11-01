@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Bowl } from "./Bowl";
-import { COOKS, fmtBowl } from "@/lib/menu";
+import { COOKS, bowlsLabel, fmtBowl, orderBowls } from "@/lib/menu";
 import { agoShort, clock } from "@/lib/dates";
 import { post, useFit, useLive, useNow } from "@/lib/live";
 import type { Order, OrderStatus } from "@/lib/types";
@@ -85,7 +85,7 @@ export function Cuisine() {
                 </div>
                 {items.length === 0 && <span className="c-empty hand">{col.empty}</span>}
                 {items.map((o) => {
-                  const f = fmtBowl(o);
+                  const bowls = orderBowls(o);
                   return (
                     <div key={o.id} className="c-ticket" style={{ borderTopColor: col.accent }}>
                       <div className="c-ticket-top">
@@ -93,13 +93,20 @@ export function Cuisine() {
                         <span className="c-name">{o.name}</span>
                         <span className="c-ago">{agoShort(o.created_at, now)}</span>
                       </div>
-                      <div className="c-lines">
-                        <span><strong>Riz</strong> · {f.base}</span>
-                        <span><strong>Légumes</strong> · {f.legumes}</span>
-                        <span className="c-prot">{f.proteine}</span>
-                        <span><strong>Tips</strong> · {f.tips}</span>
-                        {o.extras.length > 0 && <span><strong>+</strong> {f.extras}</span>}
-                      </div>
+                      {bowls.length > 1 && <span className="c-multi">{bowlsLabel(bowls.length)}</span>}
+                      {bowls.map((b, i) => {
+                        const f = fmtBowl(b);
+                        return (
+                          <div key={i} className={`c-lines${bowls.length > 1 ? " c-bowl" : ""}`}>
+                            {bowls.length > 1 && <span className="c-bowl-n bagel">Bol {i + 1}</span>}
+                            <span><strong>Riz</strong> · {f.base}</span>
+                            <span><strong>Légumes</strong> · {f.legumes}</span>
+                            <span className="c-prot">{f.proteine}</span>
+                            <span><strong>Tips</strong> · {f.tips}</span>
+                            {b.extras.length > 0 && <span><strong>+</strong> {f.extras}</span>}
+                          </div>
+                        );
+                      })}
                       <div className="c-ticket-foot">
                         <span className="hand">
                           {o.status === "new" ? "En attente" : o.status === "cooking" ? `${o.cook} prépare` : `Prêt · ${o.cook}`}

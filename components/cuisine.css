@@ -27,3 +27,6 @@ html:has(.c-outer), body:has(.c-outer) { overflow: hidden; background: var(--nor
 .c-ticket-foot .hand { font-size: 24px; }
 .c-ticket-foot button { padding: 12px 20px; border-radius: 999px; border: 3px solid var(--nori); font-size: 20px; color: var(--nori); }
 .c-ticket-foot button:disabled { opacity: .5; }
+.c-multi { align-self: flex-start; padding: 4px 12px; border: 2px solid var(--nori); border-radius: 999px; background: var(--mangue); font-weight: 700; font-size: 15px; }
+.c-bowl { padding: 10px 12px; border: 2px dashed var(--nori); border-radius: 14px; }
+.c-bowl-n { font-size: 18px; line-height: 1; }

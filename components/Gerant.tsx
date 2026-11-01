@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Bowl } from "./Bowl";
 import { agoLong, hhmm, moment, shortDate, todayParis, weekday } from "@/lib/dates";
 import { post, useLive, useNow } from "@/lib/live";
+import { bowlsLabel, orderBowls } from "@/lib/menu";
 import type { FullState, Opening, Reservation, RequestStatus } from "@/lib/types";
 import "./gerant.css";
 
@@ -159,8 +160,10 @@ export function Gerant() {
                     <span className="bagel g-row-num">{o.num}</span>
                     <span className="g-row-name">{o.name}</span>
                     <span className="g-row-bowl">
-                      {o.base ?? "—"} · {o.proteine ? `${o.proteine} × ${o.qty}` : "—"} · {plural(o.legumes.length, "légume")}
-                      {o.extras.length > 0 && ` · + ${o.extras.join(", ")}`}
+                      {orderBowls(o).length > 1 && <strong>{bowlsLabel(orderBowls(o).length)} : </strong>}
+                      {orderBowls(o)
+                        .map((b) => `${b.base ?? "—"} · ${b.proteine ? `${b.proteine} × ${b.qty}` : "—"} · ${plural(b.legumes.length, "légume")}${b.extras.length ? ` · + ${b.extras.join(", ")}` : ""}`)
+                        .join(" / ")}
                     </span>
                     <span className="g-row-cook">{o.cook ?? "—"}</span>
                     <span className="g-pill" style={{ background: ORDER_ST[o.status][1] }}>{ORDER_ST[o.status][0]}</span>
