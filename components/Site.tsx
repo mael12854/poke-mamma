@@ -68,7 +68,7 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
             ))}
             <a href="#reserver" onClick={() => setMenu(false)} className="s-cta">Réserver ma place</a>
           </nav>
-          <span className="hand s-overlay-aside">Konnichiwa…</span>
+          <span className="hand s-overlay-aside">Aloha…</span>
         </div>
       )}
 
@@ -126,7 +126,7 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
         <h2 className="bagel">Comment ça marche</h2>
         <div className="s-grid3">
           {[
-            ["Konnichiwa…", "var(--blanc)", "On t’accueille. Tu composes ton bol sur la borne."],
+            ["Aloha…", "var(--blanc)", "On t’accueille. Tu composes ton bol sur la borne."],
             ["Tenez !", "var(--saumon)", "Maël, Marin ou Renaud prépare ton bol et te l’apporte."],
             ["Ça a l’air bon", "var(--avocat)", "Toi, tu n’as plus qu’à dire ça. Et à manger."],
           ].map(([bubble, bg, text], i) => (

@@ -127,7 +127,7 @@ export function Borne({ kiosk, welcomeBg, welcomeInk }: { kiosk: number; welcome
             <div className="k-welcome-mid">
               <Bowl size={200} border={7} fill={MANGUE} stick={12} />
               <span className="k-word bagel">Poké<br />Mamma</span>
-              <span className="k-hello hand" style={{ color: welcomeInk }}>Konnichiwa…</span>
+              <span className="k-hello hand" style={{ color: welcomeInk }}>Aloha…</span>
             </div>
             <span className="k-go bagel">Touche pour commander</span>
           </button>
