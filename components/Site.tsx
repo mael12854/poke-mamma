@@ -33,6 +33,10 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
   }
 
   useEffect(() => {
+    refresh();
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = menu ? "hidden" : "";
   }, [menu]);
 

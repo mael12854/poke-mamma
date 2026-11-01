@@ -32,7 +32,7 @@ html:has(.k-outer), body:has(.k-outer) { overflow: hidden; overscroll-behavior: 
 
 /* Options */
 .k-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.k-opt { position: relative; min-height: 168px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 22px; text-align: left; border-radius: 28px; border: 4px solid var(--nori); transition: transform .12s, box-shadow .12s, background .12s; }
+.k-opt { position: relative; min-height: 168px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 22px; text-align: left; border-radius: 28px; border: 4px solid var(--nori); transition: transform .12s, box-shadow .12s; }
 .k-opt.on { box-shadow: 6px 6px 0 var(--nori); transform: translate(-3px, -3px); }
 .k-swatch { width: 64px; height: 64px; border-radius: 50%; border: 3px solid var(--nori); }
 .k-opt-label { font-size: 32px; line-height: 1.05; }
