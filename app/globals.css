@@ -1,0 +1,35 @@
+:root {
+  --saumon: #F26B4F;
+  --saumon-fonce: #C2452A;
+  --nori: #1F3A2E;
+  --nori-profond: #0F1F18;
+  --riz: #FBF4E6;
+  --avocat: #8DB255;
+  --mangue: #F7B530;
+  --blanc: #FFFFFF;
+  --div: rgba(31, 58, 46, .25);
+  --div-dark: rgba(251, 244, 230, .2);
+  --bagel: var(--f-bagel), "Bagel Fat One", cursive;
+  --sans: var(--f-sans), "Instrument Sans", system-ui, sans-serif;
+  --hand: var(--f-hand), Caveat, cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--riz);
+  color: var(--nori);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--saumon-fonce); }
+a:hover { color: var(--nori); }
+button { font-family: inherit; color: inherit; cursor: pointer; }
+button:disabled { cursor: default; }
+input, textarea { font-family: inherit; color: var(--nori); }
+:focus-visible { outline: 3px solid var(--saumon); outline-offset: 3px; }
+
+.bagel { font-family: var(--bagel); font-weight: 400; }
+.hand { font-family: var(--hand); }
+.eyebrow { font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
