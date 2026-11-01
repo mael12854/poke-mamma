@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Borne } from "@/components/Borne";
 
-export const metadata: Metadata = { title: "Borne · Poké Mamma" };
+export const metadata: Metadata = { title: "Borne · Poké Ma-Ma" };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 1, userScalable: false, themeColor: "#1F3A2E" };
 
 const BGS: Record<string, [string, string]> = {

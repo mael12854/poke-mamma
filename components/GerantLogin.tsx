@@ -29,7 +29,7 @@ export function GerantLogin() {
         <div className="g-login-brand">
           <Bowl size={56} />
           <span className="g-brand-txt">
-            <span className="bagel">Poké Mamma</span>
+            <span className="bagel">Poké Ma-Ma</span>
             <span className="hand">côté gérant</span>
           </span>
         </div>

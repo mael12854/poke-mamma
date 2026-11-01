@@ -43,9 +43,9 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
   return (
     <div className="site">
       <header className="s-nav">
-        <a href="#" className="s-brand" aria-label="Poké Mamma, accueil">
+        <a href="#" className="s-brand" aria-label="Poké Ma-Ma, accueil">
           <Bowl size={48} />
-          <span className="bagel">Poké Mamma</span>
+          <span className="bagel">Poké Ma-Ma</span>
         </a>
         <nav className="s-links">
           {LINKS.map(([href, label]) => (
@@ -59,7 +59,7 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
       {menu && (
         <div className="s-overlay" role="dialog" aria-modal="true" aria-label="Menu">
           <div className="s-overlay-top">
-            <span className="s-brand"><Bowl size={38} /><span className="bagel">Poké Mamma</span></span>
+            <span className="s-brand"><Bowl size={38} /><span className="bagel">Poké Ma-Ma</span></span>
             <button className="s-menubtn" onClick={() => setMenu(false)}>Fermer</button>
           </div>
           <nav>
@@ -85,7 +85,7 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
           </p>
         </div>
         <figure className="s-drawing">
-          <Image src="/dessin.png" alt="La fameuse ouverture de Poké Mamma" width={1940} height={1370} priority sizes="(max-width: 900px) 100vw, 560px" />
+          <Image src="/dessin.png" alt="La fameuse ouverture de Poké Ma-Ma" width={1940} height={1370} priority sizes="(max-width: 900px) 100vw, 560px" />
           <figcaption className="hand">La fameuse ouverture, dessinée par Maël</figcaption>
         </figure>
         <div className="s-hero-actions">
@@ -142,8 +142,8 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
         <h2 className="bagel">L’équipe</h2>
         <div className="s-grid3">
           {[
-            ["Co-fondateur · 10 ans", "Maël", "Le premier « Ma » de Mamma.", "var(--saumon)"],
-            ["Co-fondateur · 6 ans", "Marin", "Le deuxième « Ma » de Mamma.", "var(--avocat)"],
+            ["Co-fondateur · 10 ans", "Maël", "Le premier « Ma » de Ma-Ma.", "var(--saumon)"],
+            ["Co-fondateur · 6 ans", "Marin", "Le deuxième « Ma » de Ma-Ma.", "var(--avocat)"],
             ["Équipe · 42 ans", "Renaud", "Le papa. Il bosse là-bas aussi.", "var(--mangue)"],
           ].map(([role, name, line, bg]) => (
             <div key={name} className="s-member" style={{ background: bg }}>
@@ -165,7 +165,7 @@ export function Site({ initialOpenings }: { initialOpenings: PublicOpening[] }) 
       </section>
 
       <footer className="s-footer">
-        <span className="bagel">Poké Mamma</span>
+        <span className="bagel">Poké Ma-Ma</span>
         <span>Maël, Marin &amp; Renaud · Pas ouvert au public</span>
       </footer>
     </div>

@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-/** Le bol Poké Mamma en CSS : cercle, moitié basse remplie, deux baguettes. */
+/** Le bol Poké Ma-Ma en CSS : cercle, moitié basse remplie, deux baguettes. */
 export function Bowl({
   size,
   border = 3,

@@ -126,7 +126,7 @@ export function Borne({ kiosk, welcomeBg, welcomeInk }: { kiosk: number; welcome
             <span className="k-kiosk" style={{ color: welcomeInk }}>Borne {kiosk}</span>
             <div className="k-welcome-mid">
               <Bowl size={200} border={7} fill={MANGUE} stick={12} />
-              <span className="k-word bagel">Poké<br />Mamma</span>
+              <span className="k-word bagel">Poké<br />Ma-Ma</span>
               <span className="k-hello hand" style={{ color: welcomeInk }}>Aloha…</span>
             </div>
             <span className="k-go bagel">Touche pour commander</span>
@@ -138,7 +138,7 @@ export function Borne({ kiosk, welcomeBg, welcomeInk }: { kiosk: number; welcome
             <header className="k-head">
               <div className="k-brand">
                 <Bowl size={52} />
-                <span className="bagel">Poké Mamma</span>
+                <span className="bagel">Poké Ma-Ma</span>
               </div>
               <div className="k-prog">
                 {STEPS.map((x) => {
@@ -202,7 +202,7 @@ export function Borne({ kiosk, welcomeBg, welcomeInk }: { kiosk: number; welcome
         {step === 6 && (
           <>
             <header className="k-head">
-              <span className="bagel k-brand-txt">Poké Mamma</span>
+              <span className="bagel k-brand-txt">Poké Ma-Ma</span>
               <span className="eyebrow k-ton">Ton bol</span>
             </header>
             <div className="k-body" ref={bodyRef}>

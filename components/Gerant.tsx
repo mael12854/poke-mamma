@@ -78,7 +78,7 @@ export function Gerant() {
         <div className="g-side-brand">
           <Bowl size={44} inverted />
           <span className="g-brand-txt">
-            <span className="bagel">Poké Mamma</span>
+            <span className="bagel">Poké Ma-Ma</span>
             <span className="hand">côté gérant</span>
           </span>
         </div>

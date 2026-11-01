@@ -7,7 +7,7 @@ const instrument = Instrument_Sans({ weight: ["400", "500", "600", "700"], subse
 const caveat = Caveat({ weight: ["500", "700"], subsets: ["latin"], variable: "--f-hand", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Poké Mamma",
+  title: "Poké Ma-Ma",
   description: "Le poké bowl de la maison. Restaurant de famille, sur invitation.",
   robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
 };

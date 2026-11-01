@@ -33,3 +33,6 @@ input, textarea { font-family: inherit; color: var(--nori); }
 .hand { font-family: var(--hand); }
 .eyebrow { font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+/* « Poké Ma-Ma » ne doit jamais se couper au tiret. */
+.s-brand, .k-brand, .k-brand-txt, .k-word, .g-brand-txt .bagel, .s-footer .bagel { white-space: nowrap; }
